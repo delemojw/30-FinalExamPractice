@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  MUTATING  and  RETURNING-NEW  LISTS.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jabari-Aman Delemore.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -79,6 +79,27 @@ def run_test_doubler():
     print('The returned value is:       ', answer)
     print('The returned value should be:', expected)
 
+    arg3 = [1, -2, 10, 4]
+    arg4 = [6, 0, 9]
+    correct_arg3_after = [2, -4, 20, 8]
+    correct_arg4_after = [6, 0, 9]
+    expected2 = [12, 0, 18]
+
+    print()
+    print('BEFORE the function call:')
+    print('  Argument 3 is:', arg3)
+    print('  Argument 4 is:', arg4)
+
+    answer2 = doubler(arg3, arg4)
+
+    print('AFTER the function call:')
+    print('  Argument 1 is:       ', arg3)
+    print('  Argument 1 should be:', correct_arg3_after)
+    print('  Argument 2 is:       ', arg4)
+    print('  Argument 2 should be:', correct_arg4_after)
+    print('The returned value is:       ', answer2)
+    print('The returned value should be:', expected2)
+
     # ------------------------------------------------------------------
     # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
     # ------------------------------------------------------------------
@@ -101,6 +122,13 @@ def doubler(list1, list2):
         :type list1: list of int
         :type list2: list of int
     """
+    for k in range(len(list1)):
+        list1[k] = list1[k] * 2
+    return list1
+    for i in range(lens(list2)):
+        list2[i] = list2[i] * 2
+    return list2
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).

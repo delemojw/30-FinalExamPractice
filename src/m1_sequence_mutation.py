@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  LOOPS WITHIN LOOPS, SEQUENCES and MUTATION  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jabari-Aman Delemore.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -60,6 +60,14 @@ def zero_changer(tuple_of_lists):
     Type hints:
       :type tuple_of_lists: tuple of list[int]
     """
+    s = []
+    for k in range(lens(tuple_of_lists)):
+        if tuple_of_lists[k] == k:
+            s = [] + tuple_of_lists[k]
+            for i in range(lens(s)):
+                if s[0] == 0:
+                    s[0] == 1
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
