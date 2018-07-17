@@ -30,8 +30,26 @@ def run_test_zero_changer():
     print('  Expected:', expected1)
     print('  Actual:  ', test1)
 
+    # Test 2:
+    test2 = ([0, 4, 0, 9], [77, 55, 0, 1, 5, 0], [4, 4, 4], [0, 7, 4])
+    expected2 = ([1, 4, 2, 9], [77, 55, 3, 1, 5, 4], [4, 4, 4], [5, 7, 4])
+    zero_changer(test2)
+    print()
+    print('Test 2:')
+    print('  Expected:', expected2)
+    print('  Actual:  ', test2)
+
+    # Test 3:
+    test3 = ([0, 4, 0, 9], [77, 34, 0, 1, 5, 0], [4, 0, 4], [4, 1, 4])
+    expected3 = ([1, 4, 2, 9], [77, 34, 3, 1, 5, 4], [4, 5, 4], [4, 1, 4])
+    zero_changer(test3)
+    print()
+    print('Test 3:')
+    print('  Expected:', expected3)
+    print('  Actual:  ', test3)
+
     # ------------------------------------------------------------------
-    # TODO: 2. Write at least 2 additional tests for the  zero_changer   function.
+    # Done: 2. Write at least 2 additional tests for the  zero_changer   function.
     #   Try do do some unexpected things like empty lists or an empty tuple.
     # ------------------------------------------------------------------
 
@@ -60,13 +78,18 @@ def zero_changer(tuple_of_lists):
     Type hints:
       :type tuple_of_lists: tuple of list[int]
     """
-    s = []
-    for k in range(lens(tuple_of_lists)):
-        if tuple_of_lists[k] == k:
-            s = [] + tuple_of_lists[k]
-            for i in range(lens(s)):
-                if s[0] == 0:
-                    s[0] == 1
+    f = []
+    for k in range(len(tuple_of_lists)):
+        s = tuple_of_lists[k]
+        for i in range(len(s)):
+            if s[i] != 0:
+                pass
+            else:
+                s[i] = i + 1
+        f = [] + s
+    return f
+
+
 
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
