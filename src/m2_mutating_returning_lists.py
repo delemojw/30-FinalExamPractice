@@ -93,10 +93,10 @@ def run_test_doubler():
     answer2 = doubler(arg3, arg4)
 
     print('AFTER the function call:')
-    print('  Argument 1 is:       ', arg3)
-    print('  Argument 1 should be:', correct_arg3_after)
-    print('  Argument 2 is:       ', arg4)
-    print('  Argument 2 should be:', correct_arg4_after)
+    print('  Argument 3 is:       ', arg3)
+    print('  Argument 3 should be:', correct_arg3_after)
+    print('  Argument 4 is:       ', arg4)
+    print('  Argument 4 should be:', correct_arg4_after)
     print('The returned value is:       ', answer2)
     print('The returned value should be:', expected2)
 
