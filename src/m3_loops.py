@@ -207,9 +207,18 @@ def practice_problem3(start, n, threshold):
       :type n:     int
       :type threshold: float
     """
+    s = []
+    current = start
+    while True:
+        if len(s) >= n:
+            break
+        if (math.sin(current) + math.cos(current)) > threshold:
+            s = s + [current]
+        current = current + 1
+    return s
 
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################

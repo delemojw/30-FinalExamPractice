@@ -78,21 +78,21 @@ def zero_changer(tuple_of_lists):
     Type hints:
       :type tuple_of_lists: tuple of list[int]
     """
-    f = []
+    f = 0
     for k in range(len(tuple_of_lists)):
         s = tuple_of_lists[k]
         for i in range(len(s)):
             if s[i] != 0:
                 pass
             else:
-                s[i] = i + 1
-        f = [] + s
+                s[i] = f + 1
+                f = f + 1
     return f
 
 
 
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
