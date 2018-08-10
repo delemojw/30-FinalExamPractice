@@ -74,11 +74,11 @@ def shape(r):
     Preconditions:  r is a positive number.
     For purposes of "lining up", assume r is a single digit.
     """
-    s = []
+    s = ''
     count = r + 1
     for k in range(r):
         for j in range(k):
-            s = s + [j]
+            s = s + "j"
     print(s)
 
 
