@@ -75,12 +75,12 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     s = ''
-    count = r + 1
     for k in range(r):
         s = ""
-
         for j in range(k):
             s = s + "j"
+        for h in range(k + r):
+            s = s + "+"
         print(s)
 
 
