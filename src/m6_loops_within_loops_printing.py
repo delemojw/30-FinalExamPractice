@@ -79,8 +79,9 @@ def shape(r):
         s = ""
         for j in range(k):
             s = s + "j"
-        for h in range(k + r):
+        for h in range(r - k):
             s = s + "+"
+        
         print(s)
 
 
