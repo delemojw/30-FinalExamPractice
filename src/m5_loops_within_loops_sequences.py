@@ -96,12 +96,12 @@ def integers(sequence_of_sequences):
     """
     list_of_int = []
     sequence1 = []
-    j = []
+    sequence2 = []
     for k in range(len(sequence_of_sequences)):
         sequence1 = [sequence_of_sequences[k]]
-        for i in range(len(s])):
-           if s[i] != '':
-                list_of_int = list_of_int + [s[i]]
+        for i in range(len(sequence1)):
+           if sequence1[i] 
+                sequence2 = sequence2 + [sequence1[i]]
     return list_of_int
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
