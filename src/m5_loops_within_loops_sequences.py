@@ -98,7 +98,7 @@ def integers(sequence_of_sequences):
     sequence1 = []
     j = []
     for k in range(len(sequence_of_sequences)):
-        sequence1 = sequence1 + [sequence_of_sequences[k]]
+        sequence1 = [sequence_of_sequences[k]]
         for i in range(len(s])):
            if s[i] != '':
                 list_of_int = list_of_int + [s[i]]
