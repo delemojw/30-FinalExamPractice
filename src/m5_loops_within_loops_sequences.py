@@ -100,9 +100,9 @@ def integers(sequence_of_sequences):
     for k in range(len(sequence_of_sequences)):
         sequence1 = [sequence_of_sequences[k]]
         for i in range(len(sequence1)):
-           if sequence1[i] 
+            if type(sequence1[i]) is int:
                 sequence2 = sequence2 + [sequence1[i]]
-    return list_of_int
+    return sequence2
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
