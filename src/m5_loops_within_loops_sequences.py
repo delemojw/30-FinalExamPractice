@@ -94,11 +94,10 @@ def integers(sequence_of_sequences):
       :type sequence_of_sequences: (list|tuple) of (list|tuple|string)
       :rtype: list of int
     """
-    list_of_int = []
     sequence1 = []
     sequence2 = []
     for k in range(len(sequence_of_sequences)):
-        sequence1 = [sequence_of_sequences[k]]
+        sequence1 = sequence_of_sequences[k]
         for i in range(len(sequence1)):
             if type(sequence1[i]) is int:
                 sequence2 = sequence2 + [sequence1[i]]
