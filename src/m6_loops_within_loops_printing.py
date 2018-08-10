@@ -78,10 +78,10 @@ def shape(r):
     for k in range(r):
         s = ""
         for j in range(k):
-            s = s + "j"
+            s = s + " "
         for h in range(r - k):
             s = s + "+"
-        
+
         print(s)
 
 
