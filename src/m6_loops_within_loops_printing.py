@@ -74,6 +74,17 @@ def shape(r):
     Preconditions:  r is a positive number.
     For purposes of "lining up", assume r is a single digit.
     """
+    s = []
+    count = r + 1
+    for _ in range(r):
+        for _ in range(r+1, r, -1):
+            count = count - 1
+            s = s + [count]
+        print(s)
+
+
+
+
     # ------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Some tests are already written for you (above).
