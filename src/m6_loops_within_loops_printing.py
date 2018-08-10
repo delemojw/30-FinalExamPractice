@@ -77,11 +77,11 @@ def shape(r):
     s = ''
     count = r + 1
     for k in range(r):
-        s = s + ""
-        print(s)
+        s = ""
+        
         for j in range(k):
             s = s + "j"
-
+    print(s)
 
 
 
