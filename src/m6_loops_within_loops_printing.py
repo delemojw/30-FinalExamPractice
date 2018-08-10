@@ -81,6 +81,12 @@ def shape(r):
             s = s + " "
         for h in range(r - k):
             s = s + "+"
+        for m in range(1):
+            s = s + "!"
+        for n in range(r - k):
+            s = s + "6"
+        for o in range(k):
+            s = s + "-"
 
         print(s)
 
