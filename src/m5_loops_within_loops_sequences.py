@@ -103,7 +103,7 @@ def integers(sequence_of_sequences):
                 sequence2 = sequence2 + [sequence1[i]]
     return sequence2
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     ####################################################################

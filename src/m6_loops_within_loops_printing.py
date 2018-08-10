@@ -77,7 +77,8 @@ def shape(r):
     s = []
     count = r + 1
     for _ in range(r):
-        for _ in range(r + 1, r, -1):
+        for k in range(r):
+            for j in range(k + 1)
             count = count - 1
             s = s + [count]
         print(s)
