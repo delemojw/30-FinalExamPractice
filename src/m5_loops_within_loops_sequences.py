@@ -196,6 +196,14 @@ def big_letters(sequence_of_sequences):
 
     Precondition:  the given argument is a sequence of sequences.
     """
+    string1 = []
+    string2 = []
+    for k in range(len(sequence_of_sequences)):
+        string1 = sequence_of_sequences[k]
+        for i in range(len(string1)):
+            if string1[i] is "".isupper():
+                string2 = string2 + [string1[i]]
+    return string2
     # ------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
