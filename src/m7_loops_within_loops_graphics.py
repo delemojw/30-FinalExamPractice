@@ -90,19 +90,19 @@ def hourglass(window, n, point, radius, color):
     """
 
     for k in range(n):
-        point1 = rg.Point(point.x, point.y)
-        circle = rg.Circle(point1, radius)
-        circle.fill_color = color
-        circle.attach_to(window)
+        point1 = rg.Point(point.x + ((radius*2)*k), point.y)
+        circle1 = rg.Circle(point1, radius)
+        circle1.fill_color = color
+        circle1.attach_to(window)
         window.render()
-        for i in range(n + k):
-            point2 = rg.Point(point.x + i , point.y)
+        for i in range(n-1):
+            point2 = rg.Point(point.x + (radius*2)*(i + 0.5), point.y +((radius * 1.75)))
             circle2 = rg.Circle(point2, radius)
             circle2.fill_color = color
             circle2.attach_to(window)
             # line = rg.Line(point1.x - radius, point1.x + radius)
             # line.attach_to(window)
-            window.render()
+        window.render()
     # ------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #       We provided some tests for you (above).
