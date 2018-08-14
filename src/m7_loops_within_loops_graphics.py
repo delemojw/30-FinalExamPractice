@@ -29,7 +29,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 ########################################################################
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -88,20 +88,15 @@ def hourglass(window, n, point, radius, color):
     where n and radius are positive and color is a string that denotes
     a color that rosegraphics understands.
     """
+    for o in range(n):
+        for k in range(n - o):
+            print(o, k)
+            point1 = rg.Point(point.x + ((radius*2)*(k + 0.5*o)), point.y + (radius*math.sqrt(3))*o)
+            circle1 = rg.Circle(point1, radius)
+            circle1.fill_color = color
+            circle1.attach_to(window)
+            window.render()
 
-    for k in range(n):
-        point1 = rg.Point(point.x + ((radius*2)*k), point.y)
-        circle1 = rg.Circle(point1, radius)
-        circle1.fill_color = color
-        circle1.attach_to(window)
-        window.render()
-        for i in range(n-1):
-            point2 = rg.Point(point.x + (radius*2)*(i + 0.5), point.y +((radius * 1.75)))
-            circle2 = rg.Circle(point2, radius)
-            circle2.fill_color = color
-            circle2.attach_to(window)
-            # line = rg.Line(point1.x - radius, point1.x + radius)
-            # line.attach_to(window)
         window.render()
     # ------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
