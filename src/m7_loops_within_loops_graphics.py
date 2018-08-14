@@ -88,11 +88,15 @@ def hourglass(window, n, point, radius, color):
     where n and radius are positive and color is a string that denotes
     a color that rosegraphics understands.
     """
+
     for k in range(n):
         for i in range(k):
-            circle = rg.Circle(point, radius)
+            point1 = rg.Point(point.x, point.y)
+            circle = rg.Circle(point1, radius)
             circle.fill_color = color
             circle.attach_to(window)
+            # line = rg.Line(point1.x - radius, point1.x + radius)
+            # line.attach_to(window)
             window.render()
     # ------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
