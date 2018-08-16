@@ -133,6 +133,10 @@ def practice_problem4a(sequence):
     Type hints:
       :type sequence: list | tuple | string
     """
+    s = []
+    for k in range(len(sequence)):
+        if sequence[k - 1] == sequence[k]:
+            return k -1
     ####################################################################
     # TODO: 2. Implement and test this function.
     #     The testing code is already written for you (above).
@@ -196,6 +200,11 @@ def practice_problem4b(sequence):
     Type hints:
       :type sequence: (list | tuple) of (float | int)
     """
+    k_max = 0
+    for k in range(2, len(sequence)):
+        if sequence[k] >= sequence[k_max]:
+            k_max = k
+    return k_max
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
