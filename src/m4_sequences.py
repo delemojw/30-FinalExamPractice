@@ -37,8 +37,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_practice_problem4a()
     run_test_practice_problem4b()
-    run_test_practice_problem4c()
-    run_test_practice_problem4d()
+    # run_test_practice_problem4c()
+    # run_test_practice_problem4d()
 
 
 def is_prime(n):
@@ -134,9 +134,10 @@ def practice_problem4a(sequence):
       :type sequence: list | tuple | string
     """
     s = []
-    for k in range(len(sequence)):
-        if sequence[k - 1] == sequence[k]:
-            return k -1
+    for k in range(1, len(sequence)):
+        if sequence[k] == sequence[k-1]:
+            s = s + [k - 1]
+    return s
     ####################################################################
     # TODO: 2. Implement and test this function.
     #     The testing code is already written for you (above).
@@ -201,12 +202,12 @@ def practice_problem4b(sequence):
       :type sequence: (list | tuple) of (float | int)
     """
     k_max = 0
-    for k in range(2, len(sequence)):
-        if sequence[k] >= sequence[k_max]:
+    for k in range(0, len(sequence), 2):
+        if sequence[k] > sequence[k_max]:
             k_max = k
-    return k_max
+    return sequence[k_max]
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
