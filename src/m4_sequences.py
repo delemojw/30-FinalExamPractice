@@ -35,9 +35,9 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem4a()
-    run_test_practice_problem4b()
-    # run_test_practice_problem4c()
+    # run_test_practice_problem4a()
+    # run_test_practice_problem4b()
+    run_test_practice_problem4c()
     # run_test_practice_problem4d()
 
 
@@ -139,7 +139,7 @@ def practice_problem4a(sequence):
             s = s + [k - 1]
     return s
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -304,8 +304,21 @@ def practice_problem4c(points):
       :type points: tuple of rg.Point
       :rtype: rg.Point | string
     """
+    count = 0
+    for k in range(len(points)):
+        points[k].x1 = points[k].x
+        points[k].y1 = points[k].y
+        if is_prime(points[k].x) and is_prime(points[k].y):
+            count = count + 1
+            if count <= 1:
+                points[k].x = points[k].y1
+                points[k].y = points[k].x1
+                return points[k]
+    return "Not found"
+
+
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # ASK: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPORTANT: This problem is your LOWEST PRIORITY for preparing
